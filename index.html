@@ -2,14 +2,22 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/style.css" />
-    <script src="/src/assets/script/jquery.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="./src/assets/script/jquery.js"></script>
   </head>
-  <body id="home_page">
-    <script type="text/javascript">
-      $(function () {
-        $("#home_page").load("/src/home/home.html");
-      });
-    </script>
+  <body>
+    <object
+      data="./src/home/home.html"
+      style="
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      "
+      type="text/html"
+    ></object>
   </body>
 </html>
