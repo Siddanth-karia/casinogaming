@@ -1,17 +1,44 @@
-var modal = document.getElementById('modal');
-document.getElementById("openModal").onclick = function(){
-  modal.style.display = 'block';
+// sign in modal
+
+function signinModalOpen(){
+  document.getElementById('modal').style.display = 'block';
 }
-document.getElementById("close").onclick = function(){
-  modal.style.display = 'none';
+function signinModalClose(){
+  document.getElementById('modal').style.display = 'none';
 }
 
-var modal = document.getElementById('createmodal');
-document.getElementById("openModal").onclick = function(){
-  modal.style.display = 'block';
+
+// register modal
+function registerModalOpen(){
+  document.getElementById('registerModal').style.display = 'block';
 }
-document.getElementById("close").onclick = function(){
-  modal.style.display = 'none';
+function registerModalClose(){
+  document.getElementById('registerModal').style.display = 'none';
 }
+
+
+//create a game modal
+function createGameModal(){
+  document.getElementById('createGameModal').style.display = 'block';
+  document.getElementById("countLabel").innerHTML = 10;
+  let count = 10;
+  const func = setInterval(stoptime, 1500); 
+  function stoptime() {
+    if(count != 0){
+      count = count-1;
+      stop = document.getElementById("countLabel");
+      stop.innerHTML = count;
+    }else{
+      clearInterval(func);
+      document.getElementById('createGameModal').style.display = 'none';
+    }
+  }
+}
+// function createGameModalClose(){
+//   document.getElementById('createGameModal').style.display = 'none';
+// }
+
+
+
 
 

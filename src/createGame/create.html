@@ -17,8 +17,8 @@
         </nav>
     </header>
 
-  <main>
-    <div style="display: flex; justify-content: space-between; padding: 1%;">
+  <main >
+    <div  style="display: flex; justify-content: space-between; padding: 1%;">
       <section style="height: 100%; width: 20%; display: flex; flex-direction: column; align-items: center; justify-content: center;" >
         <div style="width: 80%; border-radius: 10px; background-color: #203744;">
           <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"> 
@@ -87,8 +87,8 @@
           <p style="color: white; margin: 0; font-size: 14px;">Min. 5</p>
         </div>
         
-        <div class="createModal" id="openModal" style="background-color:#F37543; border-radius: 5px; padding:10px">
-          <p style="color: white; margin: 0; text-align: center; font-size: 20px; font-weight: 900;">Create a Game</p>
+        <div onclick="createGameModal();" style="background-color:#F37543; border-radius: 5px; padding:10px">
+         <p style="color: white; margin: 0; text-align: center; font-size: 20px; font-weight: 900;">Create a Game</p>
         </div>
       
       </div>
@@ -167,10 +167,11 @@
         <img width="200" height="260" src="../assets/img/Backgammon.png" style="margin-top: 10px;" alt="backgammon">  
   </div>
 </section>
+
 <section>
-  <div id="createmodal" style="display: none;">
-    <div class="createmodalContent">
-      <span id="close" class="close"></span>
+  <div id="createGameModal" style="display: none;">
+    <div class="createGameModalContent">
+      <!-- <span onclick="createGameModalClose();" class="createGameModalClose">x</span> -->
       <div style="height: 200px;width: 20%;">
         <img height="50" width="50" src="../assets/img/red.png" style="margin-right: 100%;" alt="">
         <div style="display: flex;background-color: white;width: 110px;height: 110px;border-radius: 50%;border: 2px solid red;justify-content: center;margin-left: 30px;margin-top: -15%;">
@@ -191,7 +192,8 @@
       </div>
       <div style="height: 70%;width: auto;">
         <svg fill="#33C17C" width="300px" height="300px" viewBox="0 0 1920.00 1920.00" xmlns="http://www.w3.org/2000/svg" transform="rotate(270)" stroke="#33C17C" stroke-width="0.019200000000000002"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M960 0v213.333c411.627 0 746.667 334.934 746.667 746.667S1371.627 1706.667 960 1706.667 213.333 1371.733 213.333 960c0-197.013 78.4-382.507 213.334-520.747v254.08H640V106.667H53.333V320h191.04C88.64 494.08 0 720.96 0 960c0 529.28 430.613 960 960 960s960-430.72 960-960S1489.387 0 960 0" fill-rule="evenodd"></path> </g></svg>
-        <p style="margin-top: -24%;font-size: 100px;color: #33C16C;">10</p>
+        <!-- <p style="margin-top: -24%;font-size: 100px;color: #33C16C;">10</p> -->
+        <p id="countLabel" style="margin-top: -24%;font-size: 100px;color: #33C16C;"></p>
       </div>
     </div>
     </div>
