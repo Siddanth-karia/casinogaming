@@ -233,8 +233,9 @@ body{
     margin: auto;
     padding: 20px;
     width: 35%;
-    height: 90%;
+    height: 98%;
     border-radius: 5px;
+    margin-top: -2%;
  }
  .registerClose {
     color: gray;
@@ -254,10 +255,41 @@ body{
   border: 0;
   outline: none;
   border-radius: 5px;
-  margin-top: -15%;
+  margin: -4%;
   background-color: #0f212f;
   color: #FFFFFF;
  }
+ /* footer */
+ .footer-container {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+  color: gray;
+}
+.footer {
+  padding: 70px 0;
+}
+.footer-col {
+  width: 20%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #faebd7;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  position: relative;
+  margin: 0%;
+  left: 20%;
+}
+
+ 
 
 
 
