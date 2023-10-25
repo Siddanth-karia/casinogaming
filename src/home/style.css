@@ -270,7 +270,7 @@ body{
 }
 ul {
   list-style: none;
-  color: gray;
+  color: #a2b0c2;
 }
 .footer {
   padding: 70px 0;
@@ -281,7 +281,7 @@ ul {
 }
 .footer-col h4 {
   font-size: 18px;
-  color: #faebd7;
+  color: white;
   text-transform: capitalize;
   margin-bottom: 30px;
   position: relative;
