@@ -34,6 +34,11 @@ function createGameModal(){
     }
   }
 }
+function backGameModal(){
+  document.getElementById('backGameModal').style.display = 'block';
+}
+
+
 // function createGameModalClose(){
 //   document.getElementById('createGameModal').style.display = 'none';
 // }

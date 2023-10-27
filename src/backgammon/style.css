@@ -250,6 +250,40 @@
       color: #1A2C38;
       cursor: pointer;
    }
+   #backGameModal {
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    /* display: none; */
+ }
+ .backGameModalContent {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #203744;
+    margin: auto;
+    padding: 20px;
+    width: 70%;
+    height: 90%;
+    border-radius: 5px;
+    border: 3px solid white;
+ }
+ .backGameModalClose {
+    color: gray;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: -20px;
+ }
+ .backGameModalClose:hover, .backGameModalClose:focus {
+    color: #1A2C38;
+    cursor: pointer;
+ }
   
    input{
     width: 100%;
