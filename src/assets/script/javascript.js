@@ -16,6 +16,25 @@ function registerModalClose(){
   document.getElementById('registerModal').style.display = 'none';
 }
 
+// forgot password modal
+
+function forgotModalOpen(){
+  signinModalClose()
+  document.getElementById('forgotModal').style.display = 'block';
+}
+function forgotModalClose(){
+  document.getElementById('forgotModal').style.display = 'none';
+}
+
+// countinue modal
+function countinueModalOpen(){
+  signinModalClose()
+  document.getElementById('countinueModal').style.display = 'block';
+}
+function countinueModalClose(){
+  document.getElementById('countinueModal').style.display = 'none';
+}
+
 
 //create a game modal
 function createGameModal(){
