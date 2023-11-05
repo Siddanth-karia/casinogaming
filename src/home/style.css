@@ -32,10 +32,18 @@ body{
     border-radius: 3px;
   }
   
-  .header a.logo {
+  .logo{
+    float: left;
+    color:#EEEEEE;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
     font-size: 26px;
     font-weight: bold;
+    border-radius: 3px;
+    
   }
+  
   
   .header a:hover {
     background-color: #EEEEEE;
@@ -360,6 +368,12 @@ ul {
 }
 
  
+#logotxt{
+  padding: 0;
+}
+#logotxt:hover{
+  background-color: transparent;
+}
 
 
 

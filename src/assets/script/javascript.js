@@ -28,7 +28,7 @@ function forgotModalClose(){
 
 // countinue modal
 function countinueModalOpen(){
-  signinModalClose()
+  registerModalClose()
   document.getElementById('countinueModal').style.display = 'block';
 }
 function countinueModalClose(){
