@@ -228,6 +228,12 @@
     background-color: #0f212f;
     color: #FFFFFF;
    }
+   #logotxt{
+    padding: 0;
+  }
+  #logotxt:hover{
+    background-color: transparent;
+  }
       
      
       

@@ -9,7 +9,7 @@
       
   <header class="header">
     <nav>
-        <a href="#default" class="logo"><span style="color: #33C16C; ">USDT</span><span style="color: #faebd7;">WARS</span></a>
+      <div class="logo"><a id="logotxt" href="./home.html"><span style="color: #33C16C; ">USDT</span><span style="color: #faebd7;">WARS</span></a></div>
         <div class="header-right">
             <a class="sign" id="openModal" onclick="signinModalOpen();" href="#" >Sign In</a>
             <a class="active" id="registeroOpenModal" onclick="registerModalOpen();" href="#">Register</a>
@@ -110,8 +110,8 @@
   </section>
 
 
-  <!-- sign in modal -->
-  <section>
+   <!-- sign in modal -->
+   <section>
     <div id="modal" style="display: none;">
       <div class="modalContent">
         <span id="close" onclick="signinModalClose();" class="close">×</span>
@@ -123,7 +123,7 @@
         <input type="text"  name="#" placeholder="" >
 
         <p style="display: flex; color: gray;">password <span style="color: red;">*</span></p>
-        <input type="text"  name="#" placeholder="" >
+        <input type="password"  name="#" placeholder="" >
       </form>
       <div style="margin-top: -17px;height: 50px;background-color: #00e701;border-radius: 5px;">
         <p style="justify-content: center;align-items: center;font-size: 39px; ">Sign In</p>
@@ -137,7 +137,7 @@
         </svg>
       </div>
       <div style="margin: 1%;height: 20px;">
-        <p style="align-items: center;justify-content: center;margin: 0%;color: #ffffff;font-size: 17px;">Forgot password</p>
+        <p onclick="forgotModalOpen()" style="align-items: center;justify-content: center;margin: 0%;color: #ffffff;font-size: 17px;">Forgot password</p>
       </div>
       <div style="margin: 1%;height: 20px;">
         <span style="color: gray;margin: 0%;">Don't have an accoun?</span>   <span style="color: #ffffff;font-size: 20px;margin: 0%;">Register an Account</span>
@@ -166,10 +166,10 @@
         <p style="display: flex; color: gray;">password <span style="color: red;">*</span></p>
         <input type="text"  name="#" placeholder="" >
         <p style="display: flex; color: gray;">Date of birth <span style="color: red;">*</span></p>
-        <input type="text"  name="#" placeholder="" >
+        <input type="date"  name="#" placeholder="" >
       </form>
       <div style="margin-top: -17px;height: 50px;background-color: #00e701;border-radius: 5px;justify-content: center;">
-        <p style="justify-content: center;align-items: center;font-size: 39px; ">Coutinue</p>
+        <p onclick="countinueModalOpen()" style="justify-content: center;align-items: center;font-size: 39px; ">Coutinue</p>
       </div>
       <div style="margin-top: 10px;height: 30px;">
         <p style="display: flex;justify-content: center; align-items: center;margin: 0%;font-size: 23px;color: gray;">Or</p>
@@ -186,6 +186,49 @@
       </div>
       </div>
   </section>  
+<!-- countinue -->
+<section>
+  <div id="countinueModal" style="display: none;">
+    <div class="countinueModalContent">
+      <span id="countinueClose" onclick="countinueModalClose();" class="countinueClose">×</span>
+
+      <p style="font-size: 30px;color: white;margin: 1%;">Create an Account</p>
+      <p style="margin-top: -5px; font-size: 20px;color: gray;font-weight: 500;">step 2/2: Read and accept the terms and conditions</p>
+      <div style="height: 400px;background-color: #1A2C38; border-radius: 5px;"></div>
+      <div style="margin-top: 15px;width: 5%;height: 25px;border-radius: 5px;background-color: #1A2C38;"></div>
+      <p style="margin-top: -25px;color: gray;">I have read and agree to the terms and coniditions</p>
+    <div style="height: 50px;">
+      
+    <div style="margin-top: -17px;height: 50px;background-color: #00e701;border-radius: 5px;justify-content: center;">
+      <p style="justify-content: center;align-items: center;font-size: 39px; ">Play Now</p>
+    </div>
+    
+    </div>
+    <div style="margin: 1%;height: 20px;">
+      <span style="color: gray;margin: 0%;">Already have an account?</span>   <span style="color: #ffffff;font-size: 20px;margin: 0%;">Sign in</span>
+    </div>
+  
+    </div>
+    </div>
+</section>  
+
+  <!-- forgot passowrd modal  -->
+   <section>
+    <div id="forgotModal" style="display: none;">
+      <div class="forgotModalContent">
+        <span id="forgotClose" onclick="forgotModalClose();" class="forgotClose">×</span>
+        <p style="font-size: 30px;color: white;margin: 1%;">Forgot Password</p>
+      <div>
+        <form action="#" method="post">
+        <p style="display: flex; margin-top: 1px;color: gray;">Email <span style="color: red;">*</span></p>
+        <input type="text"  name="#" placeholder="" >
+      </form>
+      <div style="margin-top: -17px;height: 50px;background-color: #00e701;border-radius: 5px;">
+        <p style="justify-content: center;align-items: center;font-size: 39px; ">Recover Password</p>
+      </div>   
+      </div>
+      </div>
+  </section>
 </div>
 </main>
 <div style="border: 1px solid gray;"></div>

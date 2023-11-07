@@ -181,42 +181,7 @@
       }
       
       /* sign in modal class */
-      #modal {
-        text-align: center;
-        position: fixed;
-        z-index: 1;
-        padding-top: 100px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-        /* display: none; */
-     }
-     .modalContent {
-        font-size: 20px;
-        font-weight: bold;
-        background-color: #203744;
-        margin: auto;
-        padding: 20px;
-        width: 45%;
-        height: 70%;
-        border-radius: 5px;
-     }
-     .close {
-        color: gray;
-        float: right;
-        font-size: 40px;
-        font-weight: bold;
-        margin-top: -20px;
-     }
-     .close:hover, .close:focus {
-        color: #1A2C38;
-        cursor: pointer;
-     }
-  
-  /* register modal class */
-     #registerModal {
+    #modal {
       text-align: center;
       position: fixed;
       z-index: 1;
@@ -228,28 +193,133 @@
       background-color: rgba(0, 0, 0, 0.4);
       /* display: none; */
    }
-   .registerModalContent {
+   .modalContent {
       font-size: 20px;
       font-weight: bold;
       background-color: #203744;
       margin: auto;
       padding: 20px;
-      width: 35%;
-      height: 98%;
+      width: 45%;
+      height: 70%;
       border-radius: 5px;
-      margin-top: -2%;
    }
-   .registerClose {
+   .close {
       color: gray;
       float: right;
       font-size: 40px;
       font-weight: bold;
       margin-top: -20px;
    }
-   .registerClose:hover, .registerClose:focus {
+   .close:hover, .close:focus {
       color: #1A2C38;
       cursor: pointer;
    }
+
+/* register modal class */
+   #registerModal {
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* display: none; */
+ }
+ .registerModalContent {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #203744;
+    margin: auto;
+    padding: 20px;
+    width: 35%;
+    height: 98%;
+    border-radius: 5px;
+    margin-top: -2%;
+ }
+ .registerClose {
+    color: gray;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: -20px;
+ }
+ .registerClose:hover, .registerClose:focus {
+    color: #1A2C38;
+    cursor: pointer;
+ }
+
+
+ /* forgot modal class */
+ #forgotModal {
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  /* display: none; */
+}
+.forgotModalContent {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #203744;
+  margin: auto;
+  padding: 20px;
+  width: 35%;
+  border-radius: 5px;
+  margin-top: 200px;
+}
+.forgotClose {
+  color: gray;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: -20px;
+}
+.forgotClose:hover, .forgotClose:focus {
+  color: #1A2C38;
+  cursor: pointer;
+}
+
+/* countinue model class */
+#countinueModal {
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  /* display: none; */
+}
+.countinueModalContent {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #203744;
+  margin: auto;
+  padding: 20px;
+  width: 35%;
+  border-radius: 5px;
+  margin-top: -2%;
+}
+.countinueClose {
+  color: gray;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: -20px;
+}
+.countinueClose:hover, .countinueClose:focus {
+  color: #1A2C38;
+  cursor: pointer;
+}
+
    #backGameModal {
     text-align: center;
     position: fixed;
@@ -328,7 +398,13 @@
   a{
     text-decoration: none;
   }
-   
+  #logotxt{
+    padding: 0;
+  }
+  #logotxt:hover{
+    background-color: transparent;
+  }
+  
   
   
   
