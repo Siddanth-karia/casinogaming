@@ -327,10 +327,23 @@
       background-color: #0f212f;
       color: #FFFFFF;
      }
+
      #logotxt{
       padding: 0;
     }
     #logotxt:hover{
       background-color: transparent;
+    }
+    
+    .logo{
+      float: left;
+      color:#EEEEEE;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+      font-size: 26px;
+      font-weight: bold;
+      border-radius: 3px;
+      
     }
     
