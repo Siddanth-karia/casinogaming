@@ -217,6 +217,73 @@
         color: #1A2C38;
         cursor: pointer;
      }
+     #modal {
+      text-align: center;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      /* display: none; */
+   }
+   .modalContent {
+      font-size: 20px;
+      font-weight: bold;
+      background-color: #203744;
+      margin: auto;
+      padding: 20px;
+      width: 45%;
+      height: 70%;
+      border-radius: 5px;
+   }
+   .close {
+      color: gray;
+      float: right;
+      font-size: 40px;
+      font-weight: bold;
+      margin-top: -20px;
+   }
+   .close:hover, .close:focus {
+      color: #1A2C38;
+      cursor: pointer;
+   }
+   #walletmodal {
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* display: none; */
+ }
+ .walletmodalContent {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #203744;
+    margin: auto;
+    padding: 20px;
+    width: 35%;
+    height: 98%;
+    border-radius: 5px;
+ }
+ .walletclose {
+    color: gray;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: -20px;
+ }
+ .walletclose:hover, .close:focus {
+    color: #1A2C38;
+    cursor: pointer;
+ }
+
   
    input{
     width: 100%;

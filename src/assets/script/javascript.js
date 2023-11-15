@@ -34,6 +34,12 @@ function countinueModalOpen(){
 function countinueModalClose(){
   document.getElementById('countinueModal').style.display = 'none';
 }
+function walletModalOpen(){
+  document.getElementById('walletmodal').style.display = 'block';
+}
+function walletModalClose(){
+  document.getElementById('walletmodal').style.display = 'none';
+}
 
 
 //create a game modal
