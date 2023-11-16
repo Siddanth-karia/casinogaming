@@ -40,6 +40,12 @@ function walletModalOpen(){
 function walletModalClose(){
   document.getElementById('walletmodal').style.display = 'none';
 }
+function withdrawModalOpen(){
+  document.getElementById('withdrawmodal').style.display = 'block';
+}
+function withdrawModalClose(){
+  document.getElementById('withdrawmodal').style.display = 'none';
+}
 
 
 //create a game modal
