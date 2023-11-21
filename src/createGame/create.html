@@ -6,6 +6,24 @@
 
 
 </head>
+<style>
+  select{
+    /* padding: .3125rem 3rem .3125rem 1rem; */
+    background-image: url('../assets/img/select_arrow.png');
+    background-repeat: no-repeat, repeat;
+    background-position: right 1rem center;
+    border-radius: 5px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    color: #344040;
+    background-size: 20px 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.075);
+    outline:none;
+  }
+</style>
 <body>
 
   <header class="header">
@@ -213,87 +231,121 @@
 <section>
   <div id="walletmodal" style="display: none;">
     <div class="walletmodalContent">
-      <span id="close" onclick="walletModalClose();" class="close">×</span>
-      <img height="45" src="../assets/img/wallet.png" style="display: flex;" alt="">
-      <p  style="font-size: 30px;color: white;margin: 1%;width: 20%;margin-left: 6%;margin-top: -42px;" >Wallet</p>
-    <div style="height: 400px;">
-      <form action="#" method="post">
-     <div style="margin: 2%;height: 50px;border-radius: 30px;background-color: #1A2C38;">
-      <ul style="list-style-type: none;margin: 0;padding: 10px;">
-        <li style="display: inline;padding: 25px;color: white;">Deposit</li>
-        <li style="display: inline;padding: 25px;color: white">Withdraw</li>
-        <li style="display: inline;padding: 25px;color: white">Buy Crypo</li>
-        <li style="display: inline;padding: 25px;color: white">tip</li>
-      </ul>
-    </div>
-    <div style="margin: 0;padding: 0;">
-      <h3 style="display: inline;padding: 70px;color: #faebd7;">Currency</h3>
-      <h3 style="display: inline;padding: 70px;color: #faebd7;">Network</h3>
-      
-    </div>
-    <!-- <div style="border: 1px solid red;margin: 0;padding: 0;height: 45px;"> -->
-      <div style="width: 25%;padding:0px;margin-left: 96px;height: 44px;background-color: #1A2C38;border-radius: 5px;">
-        <img height="40" src="../assets/img/T.png" style="display: flex;" alt="">
-        <p style="margin-top: -30px;color: #faebd7;">USDT</p>
+           <div style="display: flex; align-items: center;justify-content: space-between;">
+            <div style="display: flex; align-items: center;">
+              <img height="45" src="../assets/img/wallet.png" style="display: flex;" alt="">
+              <p  style="font-size: 30px;color: white;width: 20%;" >Wallet</p>
+            </div>
+
+        <span id="close" onclick="walletModalClose();" class="close">×</span>
       </div>
-      <div style="width: 25%;height: 44px;margin-left: 333px;margin-top: -45px;border-radius: 5px;background-color: #1A2C38;">
-        <select style="margin-right: 113px; background-color: #1A2C38;height: 44px;width: 100%;border-radius: 5px;font-size: 20px;color: #faebd7;border: unset;">
-          <option style="font-size: 15px;color: #faebd7;">BSC</option>
-          <option style="font-size: 15px;color: #faebd7;">USDT</option>
-          <option style="font-size: 15px;color: #faebd7;">PKR</option>
-        </select>
-      </div>  
-    <!-- </div> -->
-    <p style="display: flex;color: #faebd7;">Your USDT deposit address</p>
-    <input type="password" style="height: 55px;">
-    <div style="margin: 3%;width: 50%;margin-left: 135px;height: 230px;background-color: #1A2C38;border-radius: 5px;"></div>
-    <p style="color: #faebd7;">only send USDT to the address,2 confirmations required.</p>
-    <p style="color: #faebd7;">1 USDT = 1 Coin OF <span style="color: #33C16C;">USDT</span><span style="color: #faebd7;">WARS</span></p>
+      <form >
+        <!-- <div style="display: flex;height: 60px; border-radius: 30px;background-color: #1A2C38;"> -->
+          <div style="display: flex;justify-content: space-around;align-items: center;height: 60px; border-radius: 30px; background-color: #1A2C38;">
+            <div id="spanBGDepositColor" style="padding: 10px 20px; border-radius: 20px;">
+              <span style="display: flex; color: #faebd7;" onclick="depositModalOpen();">deposit</span>
+            </div>
+            <div id="spanBGWithdrawColor" style=" padding: 10px 20px; border-radius: 20px;">
+             <span style="display: flex; color: #faebd7" onclick="withdrawModalOpen();">withdraw</span>
+             </div>
+             <div id="spanBGcryptoColor" style=" padding: 10px 20px; border-radius: 20px;">
+             <span style="display: flex; color: #faebd7" onclick="cryptoModalOpen();">buy Crypto</span>
+            </div>
+             <span style="display: flex; color: #faebd7">tip</span>
+        </div>
+
+    <!-- deposit section start  -->
+    <div id="depositSection" style="display: block;">
+
+      <div style="display: flex; justify-content: space-around; align-items: center; margin: 15px 10px;">
+        <div>
+          <h3 style="margin: 0; color: white;text-align: left;">Currency</h3>
+          <div style="margin: 5px;"></div>
+          <div style="width: 150px;height: 64px; display:flex; align-items: center; justify-content: center;background-color: #1A2C38;border-radius: 5px;">
+            <img height="40" src="../assets/img/T.png" alt="">
+            <p style="color: #faebd7;">USDT</p>
+          </div>
+        </div>
+        <div>
+          <h3 style="margin: 0; color: white; text-align: left;">Network</h3>
+          <div style="margin: 5px;"></div>
+            <select style=" background-color: #1A2C38;height: 64px;width: 150px; padding: 0 10px; border-radius: 5px;font-size: 20px;color: #faebd7;">
+              <option style="font-size: 15px;color: #faebd7;">BSC</option>
+              <option style="font-size: 15px;color: #faebd7;">USDT</option>
+              <option style="font-size: 15px;color: #faebd7;">PKR</option>
+            </select>
+          </div>  
+        </div>
+        <p style="display: flex;color: #faebd7;">Your USDT deposit address</p>
+        <input type="text" style="height: 55px;">
+        <div style="margin: 10px;width: 50%;margin-left: 135px;height: 230px;background-color: #1A2C38;border-radius: 5px;"></div>
+        <p style="margin: 0; color: #faebd7;">only send USDT to the address,2 confirmations required.</p>
+        <p style="margin: 0; color: #faebd7;">1 USDT = 1 Coin OF <span style="color: #33C16C;">USDT</span><span style="color: #faebd7;">WARS</span></p>
+      </div>
+     <!-- deposit section end  -->
+
+     <!-- witthdraw section atart  -->
+     <div id="withdrawSection" style="display: none;">
+      <div style="display: flex; justify-content: space-around; align-items: center; margin: 15px 10px;">
+        <div>
+          <h3 style="margin: 0; color: white;text-align: left;">Currency</h3>
+          <div style="margin: 5px;"></div>
+          <div style="width: 150px;height: 64px; display:flex; align-items: center; justify-content: center;background-color: #1A2C38;border-radius: 5px;">
+            <p style="color: #faebd7;">0.0034</p>
+            <img height="40" src="../assets/img/T.png" alt="">
+          </div>
+        </div>
+        <div>
+          <h3 style="margin: 0; color: white; text-align: left;">Network</h3>
+          <div style="margin: 5px;"></div>
+            <select style=" background-color: #1A2C38;height: 64px;width: 150px; padding: 0 10px; border-radius: 5px;font-size: 20px;color: #faebd7;">
+              <option style="font-size: 15px;color: #faebd7;">BSC</option>
+              <option style="font-size: 15px;color: #faebd7;">USDT</option>
+              <option style="font-size: 15px;color: #faebd7;">PKR</option>
+            </select>
+          </div>  
+        </div>
+        <div style="display: flex; align-items: center;">
+        <img height="40" src="../assets/img/T.png"  alt="">
+        <p style="display: flex;color: #faebd7;">USDT address <span style="color: red;">*</span></p>
+        <!-- <input type="text" style="height: 55px;"> -->
+      </div>
+        <input type="text" style="height: 55px;">
+        <p style="display: flex; color: #faebd7;">Amount <span style="color: red;">*</span></p>
+        <div style="display: flex; height: 50px; margin-top: -20px;background-color: #0f212f;border-radius: 5px;">
+          <div style="justify-content: space-between;">
+            <input style="width: 380px;margin: 5px;height: 40px;" type="text">
+          </div>
+          <div style="justify-content: space-between;align-items: center;padding: 5px;">
+            <img height="40" src="../assets/img/T.png" alt="">
+          </div>
+          <div style=" height: 50px;width: 80px;border-radius: 5px;background-color: #1A2C38;display: block;">
+            <p style="margin: 13px; color: #faebd7;">MAX</p>
+          </div>
+        </div>
+        <div style="display: flex; margin: 10px;height: 50px;background-color: #1475E1;border-radius: 5px ;text-align: center;justify-content: center;">
+          <p style="color: #faebd7; font-size: 30px;margin: 6px;">SEND</p>
+        </div>
+        
+          <p style="color: gray;margin: 4px;font-size: 20px;">minimum withdrawal is 2.500  your withdrawal will have 1.000 
+            subtrated from your remaining balance to cover the fee required to process the transaction.
+          </p>
+
+        
+        
+        <p style=" padding: 10px; color: #faebd7;">1 USDT = 1 Coin OF <span style="color: #33C16C;">USDT</span><span style="color: #faebd7;">WARS</span></p>
+      </div>
+     </div>
+     <!-- witthdraw section end  -->
+
+     <!-- Crypto section start -->
+     <div id="cryptoSection" style="display: block;">
+
+    </div>
+
     </div>
     </div>
 </section>
-<!-- withdraw  -->
-<section>
-  <div id="withdrawmodal" style="display: none;">
-    <div class="withdrawmodalContent">
-      <span id="close" onclick="withdrawModalClose();" class="close">×</span>
-      <img height="45" src="../assets/img/wallet.png" style="display: flex;" alt="">
-      <p  style="font-size: 30px;color: white;margin: 1%;width: 20%;margin-left: 6%;margin-top: -42px;" >Wallet</p>
-    <div style="height: 400px;">
-      <form action="#" method="post">
-     <div style="margin: 2%;height: 50px;border-radius: 30px;background-color: #1A2C38;">
-      <ul style="list-style-type: none;margin: 0;padding: 10px;">
-        <li style="display: inline;padding: 25px;color: white;">Deposit</li>
-        <li onclick="withdrawModalOpen()" style="display: inline;padding: 25px;color: white">Withdraw</li>
-        <li style="display: inline;padding: 25px;color: white">Buy Crypo</li>
-        <li style="display: inline;padding: 25px;color: white">tip</li>
-      </ul>
-    </div>
-    <div style="margin: 0;padding: 0;">
-      <h3 style="display: inline;padding: 70px;color: #faebd7;">Currency</h3>
-      <h3 style="display: inline;padding: 70px;color: #faebd7;">Network</h3>
-      
-    </div>
-    <!-- <div style="border: 1px solid red;margin: 0;padding: 0;height: 45px;"> -->
-      <div style="width: 25%;padding:0px;margin-left: 96px;height: 44px;background-color: #1A2C38;border-radius: 5px;">
-        <img height="40" src="../assets/img/T.png" style="display: flex;" alt="">
-        <p style="margin-top: -30px;color: #faebd7;">USDT</p>
-      </div>
-      <div style="width: 25%;height: 44px;margin-left: 333px;margin-top: -45px;border-radius: 5px;background-color: #1A2C38;">
-        <select style="margin-right: 113px; background-color: #1A2C38;height: 44px;width: 100%;border-radius: 5px;font-size: 20px;color: #faebd7;border: unset;">
-          <option style="font-size: 15px;color: #faebd7;">BSC</option>
-          <option style="font-size: 15px;color: #faebd7;">USDT</option>
-          <option style="font-size: 15px;color: #faebd7;">PKR</option>
-        </select>
-      </div>  
-    <!-- </div> -->
-    <p style="display: flex;color: #faebd7;">Your USDT deposit address</p>
-    <input type="password" style="height: 55px;">
-   
-    </div>
-</section>
-
-
 
 </div>
 

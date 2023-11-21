@@ -36,17 +36,39 @@ function countinueModalClose(){
 }
 function walletModalOpen(){
   document.getElementById('walletmodal').style.display = 'block';
+  document.getElementById('spanBGDepositColor').style.backgroundColor = "#2f4454";
 }
 function walletModalClose(){
   document.getElementById('walletmodal').style.display = 'none';
 }
+function depositModalOpen(){
+  withdrawModalClose()
+  document.getElementById('depositSection').style.display = "block";
+  document.getElementById('spanBGDepositColor').style.backgroundColor = "#2f4454";
+}
+function depositModalClose(){
+  document.getElementById('depositSection').style.display = "none";
+  document.getElementById('spanBGDepositColor').style.backgroundColor = "#1A2C38";
+}
 function withdrawModalOpen(){
-  document.getElementById('withdrawmodal').style.display = 'block';
+  depositModalClose();
+  document.getElementById('withdrawSection').style.display = "block";
+  document.getElementById('spanBGWithdrawColor').style.backgroundColor = "#2f4454";
 }
 function withdrawModalClose(){
-  document.getElementById('withdrawmodal').style.display = 'none';
+  document.getElementById('withdrawSection').style.display = "none";
+  document.getElementById('spanBGWithdrawColor').style.backgroundColor = "#1A2C38";
 }
-
+// crypto
+function cryptoModalOpen(){
+  withdrawModalClose();
+  document.getElementById('cryptoSection').style.display = "block";
+  document.getElementById('spanBGcryptoColor').style.backgroundColor = "#2f4454";
+}
+function cryptoModalClose(){
+  document.getElementById('cryptoSection').style.display = "none";
+  document.getElementById('spanBGcryptoColor').style.backgroundColor = "#1A2C38";
+}
 
 //create a game modal
 function createGameModal(){
@@ -73,8 +95,3 @@ function backGameModal(){
 // function createGameModalClose(){
 //   document.getElementById('createGameModal').style.display = 'none';
 // }
-
-
-
-
-
