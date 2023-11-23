@@ -251,7 +251,9 @@
              <div id="spanBGcryptoColor" style=" padding: 10px 20px; border-radius: 20px;">
              <span style="display: flex; color: #faebd7" onclick="cryptoModalOpen();">buy Crypto</span>
             </div>
-             <span style="display: flex; color: #faebd7">tip</span>
+            <div id="spanBGtipColor" style=" padding: 10px 20px; border-radius: 20px;">
+             <span style="display: flex; color: #faebd7" onclick="tipModalOpen();">tip</span>
+            </div>
         </div>
 
     <!-- deposit section start  -->
@@ -327,22 +329,103 @@
           <p style="color: #faebd7; font-size: 30px;margin: 6px;">SEND</p>
         </div>
         
-          <p style="color: gray;margin: 4px;font-size: 20px;">minimum withdrawal is 2.500  your withdrawal will have 1.000 
-            subtrated from your remaining balance to cover the fee required to process the transaction.
-          </p>
+          <p style="color: gray;margin: 4px;font-size: 20px; display: flex;">minimum withdrawal is 2.500 your withdrawal will have </p>
+          <p style="color: gray;margin: 4px;font-size: 18px; display: flex;">1.000 subtracted from your remaining balance to cover the fee </p>
+          <p style="color: gray;margin: 4px;font-size: 20px;display: flex;">required to process the transaction. </p>
 
         
         
         <p style=" padding: 10px; color: #faebd7;">1 USDT = 1 Coin OF <span style="color: #33C16C;">USDT</span><span style="color: #faebd7;">WARS</span></p>
       </div>
-     </div>
-     <!-- witthdraw section end  -->
+      <!-- witthdraw section end  -->
 
+      
      <!-- Crypto section start -->
-     <div id="cryptoSection" style="display: block;">
-
+     <div id="cryptoSection" style="display: none;">
+       
+        <p style="display: flex; color: #faebd7;padding: 5px;">Buy</p>
+        <div style="display: flex; height: 50px;margin-top: -20px; background-color: #0f212f;border-radius: 5px;">
+          <div style="justify-content: space-between;">
+            <input style="width: 380px;margin: 5px;height: 40px;" type="text">
+          </div>
+          <div style="justify-content: space-between;align-items: center;padding: 5px;">
+          </div>
+          <div style=" height: 50px;width: 110px;border-radius: 2px;background-color: #1A2C38; justify-content: space-between;align-items: center;">
+            <div style="margin: 5px; display: flex;justify-content: center;align-items: center;">
+            <img height="40" src="../assets/img/T.png" alt="">
+            <p style=" display: flex; margin: 5px; color: #faebd7;">USDT</p>
+            </div>
+          </div>
+        </div>
+        <p style="display: flex; color: #faebd7;padding: 5px;">Pay with USD</p>
+        <div style="display: flex; height: 50px;margin-top: -20px; background-color: #0f212f;border-radius: 5px;">
+          <div style="justify-content: space-between;">
+            <input style="width: 380px;margin: 5px;height: 40px;" type="text">
+          </div>
+          <div style="justify-content: space-between;align-items: center;padding: 5px;">
+          </div>
+          <div style=" height: 50px;width: 110px;border-radius: 2px;background-color: #1A2C38; justify-content: space-between;align-items: center;">
+            <div style="display: flex; padding: 5px;">
+            <!-- <img height="40" src="../assets/img/T.png"  alt=""> -->
+            <div style="display: flex; justify-content: space-between;">
+              <select style="display: flex; background-color: #1A2C38; height: 40px;width: 100px; border-radius: 5px;font-size: 20px;color: #faebd7;">
+                <option style="font-size: 20px;color: #faebd7;">USD</option>
+                <option style="font-size: 20px;color: #faebd7;">USDT</option>
+                <option style="font-size: 20px;color: #faebd7;">PKR</option>
+              </select>
+          </div>
+ 
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; margin: 20px;height: 50px;background-color: #33C16C; border-radius: 5px ;text-align: center;justify-content: center;">
+        <p style="font-size: 30px;margin: 6px; color: #0f212f;">Esty</p>
+      </div>
+      
+        <p style="font-size: 15px;color: gray;">The services doesn't support right now coming soon</p>
+        <p style=" margin: 150px; color: #faebd7;font-size: 15px;">1 USDT = 1 Coin OF <span style="color: #33C16C;font-size: 15px;">USDT</span><span style="color: #faebd7;font-size: 15px;">WARS</span></p>
     </div>
-
+ <!-- Crypto section end -->
+ <!-- tip section start -->
+<div id="tipSection" style="display: none;">
+  <div style="display: flex; justify-content: center; align-items: center; margin: 15px 10px;">
+    <div>
+      <h3 style="margin: 0; color: white;text-align: left;">Currency</h3>
+      <div style="margin: 5px;"></div>
+      <div style="width: 150px;height: 64px; display:flex; align-items: center; justify-content: center;background-color: #1A2C38;border-radius: 5px;">
+        <p style="color: #faebd7;">0.0034</p>
+        <img height="40" src="../assets/img/T.png" alt="">
+      </div>
+    </div>
+    <div>
+</div>
+    </div>
+    <div>
+   <p style="display: flex;color: gray;">NAME <span style="color: red;">*</span></p>
+   <input type="text" style="height: 55px;">
+  </div>
+  <!-- <input type="text" style="height: 55px;"> -->
+        <p style="display: flex; color: gray;">Amount <span style="color: red;">*</span></p>
+        <div style="display: flex; height: 50px; margin-top: -20px;background-color: #0f212f;border-radius: 5px;">
+          <div style="justify-content: space-between;">
+            <input style="width: 380px;margin: 5px;height: 40px;" type="text">
+          </div>
+          <div style="justify-content: space-between;align-items: center;padding: 5px;">
+            <img height="40" src="../assets/img/T.png" alt="">
+          </div>
+          <div style=" height: 50px;width: 80px;border-radius: 5px;background-color: #1A2C38;display: block;">
+            <p style="margin: 13px; color: #faebd7;">MIN</p>
+          </div>
+        </div>
+        <div style="display: flex; margin: 10px;height: 50px;background-color: #F37543; border-radius: 5px ;text-align: center;justify-content: center;">
+          <p style=" font-size: 30px;margin: 6px;">TIP</p>
+        </div>
+        <div>
+        <p style="display: flex;color: gray;">minimum tip is 1.000 .</p>
+      </div>
+      <div>
+        <p style="padding: 70px; color: #faebd7;font-size: 15px;">1 USDT = 1 Coin OF <span style="color: #33C16C;font-size: 15px;">USDT</span><span style="color: #faebd7;font-size: 15px;">WARS</span></p>
+      </div>
     </div>
     </div>
 </section>
